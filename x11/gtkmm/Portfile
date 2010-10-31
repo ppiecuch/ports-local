@@ -21,6 +21,7 @@ checksums           md5     4356dfde44b13f7fb1bfbd97623f37dd \
 depends_lib	port:gtk2 \
                 port:glibmm \
                 path:lib/pkgconfig/cairomm-1.0.pc:cairomm \
+                port:atkmm \
                 port:pangomm
 
 livecheck.type  regex
