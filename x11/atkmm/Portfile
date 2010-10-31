@@ -1,0 +1,25 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id: Portfile 69672 2010-07-13 11:00:10Z ryandesign@macports.org $
+
+PortSystem 1.0
+
+name		atkmm
+version		2.22.0
+set branch      [join [lrange [split ${version} .] 0 1] .]
+description	C++ interface to ATK.
+long_description        atkmm is C++ interface to Gnome Atk - part of gtkmm library
+maintainers	devans openmaintainer
+categories	x11 devel
+platforms	darwin
+homepage	http://www.gtkmm.org/
+master_sites    gnome:sources/${name}/${branch}/
+use_bzip2	yes
+checksums           md5     6faeedb26810fd954a856f05e03d4ea8 \
+                    sha1    eec035b8312b38f3b835d6c1ec4a5813dbaee5f8 \
+                    rmd160  ce9b53af4ebaf8199d958fb8b414b06d7c593714
+depends_lib	port:gtk2 \
+                port:glibmm
+
+livecheck.type  regex
+livecheck.url   http://ftp.gnome.org/pub/gnome/sources/${name}/${branch}/
+livecheck.regex {LATEST-IS-(\d+(?:\.\d+)*)}
