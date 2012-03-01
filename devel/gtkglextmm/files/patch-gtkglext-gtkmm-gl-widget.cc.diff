@@ -1,5 +1,5 @@
---- widget.cc.orig	2010-10-31 18:59:55.000000000 +0100
-+++ widget.cc	2010-10-31 19:00:21.000000000 +0100
+--- gtkglext/gtkmm/gl/widget.cc.orig	2010-10-31 18:59:55.000000000 +0100
++++ gtkglext/gtkmm/gl/widget.cc	2010-10-31 19:00:21.000000000 +0100
 @@ -17,9 +17,10 @@
   * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307  USA.
   */

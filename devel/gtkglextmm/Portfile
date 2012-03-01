@@ -6,7 +6,7 @@ PortGroup               muniversal 1.0
 
 name                    gtkglextmm
 version                 1.2.0
-release					1
+revision            	2
 categories              devel
 maintainers             billitch
 description             OpenGL Extension to GTK, C++ bindings
@@ -24,7 +24,8 @@ checksums               md5     6296b82bde8daa68452b2f0b4dadcb9e \
 
 depends_lib \
 	port:gtkglext \
-	port:gtkmm
+	port:gtkmm \
+	path:lib/pkgconfig/pangox.pc:pango
 
 patchfiles				 patch-gtkglext-gtkmm-gl-widget.cc.diff
 

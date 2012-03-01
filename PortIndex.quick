@@ -1,4 +1,5 @@
-glib2 0
-erlang 610
-atkmm 1423
-gtkmm 1789
+qt3-mac 0
+gtkglextmm 434
+libdevil 849
+atkmm 1742
+gtkmm 2108
