@@ -1,0 +1,15 @@
+--- src/kernel/qt_mac.pri	2004-02-03 15:23:22.000000000 +0100
++++ modif/qt_mac.pri	2010-11-02 12:41:26.000000000 +0100
+@@ -1,6 +1,6 @@
+ !x11:mac {
+    macx-g++:QMAKE_LFLAGS_PREBIND    = -seg1addr 0xB2000000
+-   macx:LIBS += -framework Carbon -framework QuickTime
++   macx:LIBS += /usr/lib/dylib1.10.5.o -framework Carbon -framework QuickTime
+    PRECOMPILED_HEADER = kernel/qt_pch.h
+    *-mwerks:INCLUDEPATH += compat
+    mac9 {
+@@ -9,3 +9,4 @@
+      #INCLUDEPATH += "MacOS 9:CarbonLib_1.2_SDK:Carbon Support:Universal Interfaces:CIncludes" 
+    }
+ }
++

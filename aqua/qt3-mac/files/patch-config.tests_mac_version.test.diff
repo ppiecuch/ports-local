@@ -1,0 +1,18 @@
+--- config.tests/mac/mac_version.test	2004-04-23 18:40:40.000000000 +0200
++++ modif/mac_version.test	2010-11-02 12:41:26.000000000 +0100
+@@ -20,8 +20,8 @@
+ echo "#include <Carbon/Carbon.h>" >$TSTFILE
+ echo "#include <stdio.h>" >>$TSTFILE
+ echo "int main() {" >>$TSTFILE
+-echo "  long gestalt_version;" >>$TSTFILE
+-/bin/echo "  fprintf(stdout, \"%d\\n\", (Gestalt(gestaltSystemVersion, &gestalt_version) == noErr) ? gestalt_version : 0);" >>$TSTFILE
++echo "  int gestalt_version;" >>$TSTFILE
++echo "  fprintf(stdout, \"%d\\\n\", (Gestalt(gestaltSystemVersion, &gestalt_version) == noErr) ? gestalt_version : 0);" >>$TSTFILE
+ echo "  return 1;" >>$TSTFILE
+ echo "}" >>$TSTFILE
+ 
+@@ -42,3 +42,4 @@
+     echo $MAC_VERSION
+     exit 0
+ fi
++

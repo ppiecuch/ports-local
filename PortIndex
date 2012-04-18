@@ -1,5 +1,5 @@
-qt3-mac 422
-variants {mysql4 mysql5 universal} portdir aqua/qt3-mac description {Qt Tool Kit (Native Aqua Version)} homepage http://qt.nokia.com/ epoch 0 platforms darwin name qt3-mac depends_lib {port:zlib port:jpeg port:libpng port:libmng} long_description {This is Qt, TrollTech's C++ toolkit for writing cross-platform GUI applications.} maintainers {blair openmaintainer} license unknown categories aqua version 3.3.8 revision 1
+qt3-mac 423
+variants {mysql4 mysql5 universal} portdir aqua/qt3-mac description {Qt Tool Kit (Native Aqua Version)} homepage http://qt.nokia.com/ epoch 0 platforms darwin name qt3-mac depends_lib {port:zlib port:jpeg port:libpng port:libmng} long_description {This is Qt, TrollTech's C++ toolkit for writing cross-platform GUI applications.} maintainers {blair openmaintainer} license unknown categories aqua version 3.3.8b revision 2
 gtkglextmm 400
 variants universal portdir devel/gtkglextmm description {OpenGL Extension to GTK, C++ bindings} homepage http://sourceforge.net/projects/gtkglext/ epoch 0 platforms darwin depends_lib {port:gtkglext port:gtkmm path:lib/pkgconfig/pangox.pc:pango} name gtkglextmm long_description {{OpenGL Extension to GTK, C++ bindings}} maintainers billitch license unknown categories devel version 1.2.0 revision 2
 libdevil 880

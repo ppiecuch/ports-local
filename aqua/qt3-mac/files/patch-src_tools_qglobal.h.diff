@@ -1,0 +1,17 @@
+--- src/tools/qglobal.h	2007-02-02 15:01:04.000000000 +0100
++++ modif/qglobal.h	2010-11-02 12:41:26.000000000 +0100
+@@ -186,7 +186,13 @@
+ #  if !defined(MAC_OS_X_VERSION_10_5)
+ #       define MAC_OS_X_VERSION_10_5 MAC_OS_X_VERSION_10_4 + 1
+ #  endif
+-#  if (MAC_OS_X_VERSION_MAX_ALLOWED > MAC_OS_X_VERSION_10_5)
++#  if !defined(MAC_OS_X_VERSION_10_6)
++#       define MAC_OS_X_VERSION_10_6 MAC_OS_X_VERSION_10_5 + 1
++#  endif
++#  if !defined(MAC_OS_X_VERSION_10_7)
++#       define MAC_OS_X_VERSION_10_7 MAC_OS_X_VERSION_10_6 + 1
++#  endif
++#  if (MAC_OS_X_VERSION_MAX_ALLOWED > MAC_OS_X_VERSION_10_7)
+ #    error "This version of Mac OS X is unsupported"
+ #  endif
+ #endif
