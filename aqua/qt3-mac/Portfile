@@ -4,7 +4,7 @@ PortSystem		1.0
 
 name			qt3-mac
 version			3.3.8b
-revision		2
+revision		3
 categories		aqua
 maintainers		blair openmaintainer
 description		Qt Tool Kit (Native Aqua Version)
@@ -55,7 +55,7 @@ configure.args	-v -prefix '${prefix}' \
 			-no-sql-ibase -no-sql-mysql -no-sql-odbc -no-sql-psql \
 			-no-sql-sqlite -no-nis -no-cups -ipv6 \
 			-largefile \
-			-system-libpng -system-zlib -system-libjpeg -system-libmng \
+			-qt-libpng -system-zlib -system-libjpeg -system-libmng \
 			'-I${prefix}/include' '-L${prefix}/lib'
 
 build.env	QMAKESPEC='' QTDIR='' PATH="PATH=/opt/local/bin:/opt/local/sbin:/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:${worksrcpath}/bin" DYLD_LIBRARY_PATH="${worksrcpath}/lib"
