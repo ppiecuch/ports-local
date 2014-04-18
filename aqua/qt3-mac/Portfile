@@ -4,7 +4,7 @@ PortSystem		1.0
 
 name			qt3-mac
 version			3.3.8b
-revision		4
+revision		5
 categories		aqua
 maintainers		blair openmaintainer
 description		Qt Tool Kit (Native Aqua Version)
@@ -41,6 +41,7 @@ variant mysql5 {
 					-plugin-sql-mysql
 }
 
+# xcodebuild -version -sdk macosx10.8 2>/dev/null | grep -v PlatformPath | grep Path | sed 's/Path: //'
 configure.sdkroot    /Developer/SDKs/MacOSX10.6.sdk
 configure.build_arch i386
 configure.cmd	"echo yes | ./configure"
