@@ -5,7 +5,7 @@ PortGroup muniversal 1.0
 
 name                libdevil
 version             1.7.8
-revision            5
+revision            6
 categories          devel multimedia
 platforms           darwin
 maintainers         nomaintainer
@@ -50,10 +50,9 @@ configure.args      --disable-exr \
                     --disable-render \
                     --disable-shm \
 		    --with-nvtt=no
+
 # clang++ -std=gnu99 yields an error, #31765 
-if {${configure.compiler} == "clang"} { 
-   configure.compiler llvm-gcc-4.2
-}
+
 if {![variant_isset universal]} {
     if {${configure.build_arch} == "i386"} {
         configure.args-append   --enable-x86
