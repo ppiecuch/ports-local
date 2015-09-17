@@ -1,0 +1,14 @@
+--- src/tbbmalloc/frontend.cpp.orig	2015-08-24 10:13:37.000000000 +0200
++++ src/tbbmalloc/frontend.cpp	2015-09-17 10:16:58.000000000 +0200
+@@ -2408,6 +2408,11 @@
+                 EXCEPTION_EXECUTE_HANDLER : EXCEPTION_CONTINUE_SEARCH ) {
+         id = BackRefIdx();
+     }
++#else
++    typedef void (*sig_t) (int);
++    const sig_t old = signal(SIGBUS, SIG_IGN); // yes, I know, but it's just to diagnose the problem
++    id = *ptr;
++    (void) signal(SIGSEGV, old); // hopelessly naive
+ #endif
+     return id;
+ }
